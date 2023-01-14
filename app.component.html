@@ -1,0 +1,24 @@
+
+    <div class="top-menu">
+
+    <img class="logo"
+         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+<div [ngStyle]="{'background-color':'skyblue'}">
+    <div class="courses" >
+    <app-course-card *ngFor="let kurs of kursevi; index as i; first as prv; last as posleden; even as nepar; odd as par"
+    [class.is-first]="prv"
+    [class.is-last]="posleden"
+    [class.is-even]="nepar"
+    [class.is-odd]="par"
+
+    (suzi)="onAppViewed($event)"
+    [indeks]="i+1"
+    [crs]="kurs" ></app-course-card>
+    
+    
+</div>
+
+</div>
+
